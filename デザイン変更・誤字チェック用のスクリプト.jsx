@@ -7,88 +7,9 @@ var winObj = (this instanceof Panel) ? this : new Window('palette', 'Auto Slide 
 
     var contentsGrp = winObj.add('group',undefined,'contentsGrp');
     contentsGrp.orientation = 'column';
-        try{
-//~         var myBannerPath = new File (thisFolderPath+'/icon.png');
-        var banner = contentsGrp.add('image',undefined,myBannerPath);
-        banner.alignment = [ScriptUI.Alignment.LEFT,ScriptUI.Alignment.CENTER];
-        //~     banner.alignment = [ScriptUI.Alignment.LEFT,ScriptUI.Alignment.CENTER]
-        }
-        catch(e){
-        }
-
-var box01 = [0,0,10,20];
-var box02 = [0,0,70,20];
 
     var tab = contentsGrp.add('tabbedpanel');
-        var tabSetting = tab.add('tab',undefined,'スクリプト');
-//~         var tabEdit = tab.add('tab',undefined,'準備中');
-        tabSetting.alignChildren = 'left';
-
-            var compSettingPnl = tabSetting.add('panel',undefined,'文字色を変更');
-                var compSettingGrp = compSettingPnl.add('group',undefined,'compSettingGrp');
-                compSettingGrp.orientation = 'row';
-                compSettingGrp.alignment = [ScriptUI.Alignment.LEFT,ScriptUI.Alignment.CENTER];
-                    var compSettingGrpLeft = compSettingGrp.add('group',undefined,'compSettingGrpLeft');
-                    compSettingGrpLeft.orientation = 'column';
-                    compSettingGrpLeft.alignChildren = 'left';
-                    
-                    var compSettingGrpRight = compSettingGrp.add('group',undefined,'compSettingGrpRight');
-                    compSettingGrpRight.orientation = 'row';
-                    compSettingGrpRight.alignChildren = 'left';
-                        var compSettingGrpRightGrp002_red = compSettingGrpRight.add("button",[20,20,50,50],"赤");
-                        var compSettingGrpRightGrp002_black = compSettingGrpRight.add("button",[20,20,50,50],"黒");
-                        var compSettingGrpRightGrp002_white = compSettingGrpRight.add("button",[20,20,50,50],"白");
-                        compSettingGrpRightGrp002_red.orientation = 'row';            
-                        compSettingGrpRightGrp002_black.orientation = 'row';                     
-                        compSettingGrpRightGrp002_white.orientation = 'row';     
-                        
- var compSettingPnl = tabSetting.add('panel',undefined,'枠を付ける');
-                var compSettingGrp = compSettingPnl.add('group',undefined,'compSettingGrp');
-                compSettingGrp.orientation = 'row';
-                compSettingGrp.alignment = [ScriptUI.Alignment.LEFT,ScriptUI.Alignment.CENTER];
-                    var compSettingGrpLeft = compSettingGrp.add('group',undefined,'compSettingGrpLeft');
-                    compSettingGrpLeft.orientation = 'column';
-                    compSettingGrpLeft.alignChildren = 'left';
-                    
-                    var compSettingGrpRight = compSettingGrp.add('group',undefined,'compSettingGrpRight');
-                    compSettingGrpRight.orientation = 'column';
-                    compSettingGrpRight.alignChildren = 'left';
-                        var compSettingGrpRightGrp003_blackLine = compSettingGrpRight.add("button",[20,20,50,50],"黒");
-                        compSettingGrpRightGrp003_blackLine.orientation = 'row';
-
-                    var compSettingGrpRight = compSettingGrp.add('group',undefined,'compSettingGrpRight');
-                    compSettingGrpRight.orientation = 'column';
-                    compSettingGrpRight.alignChildren = 'left';
-                        var compSettingGrpRightGrp003_whiteLine = compSettingGrpRight.add("button",[20,20,50,50],"白");
-                        compSettingGrpRightGrp003_whiteLine.orientation = 'row';
-                        
-                     var compSettingGrpRight = compSettingGrp.add('group',undefined,'compSettingGrpRight');
-                    compSettingGrpRight.orientation = 'column';
-                    compSettingGrpRight.alignChildren = 'left';
-                        var compSettingGrpRightGrp003_reset = compSettingGrpRight.add("button",[20,20,50,50],"無");
-                        compSettingGrpRightGrp003_whiteLine.orientation = 'row';                       
-
-var sizeLine = compSettingGrp.add("edittext", undefined, "10"); 
-                        sizeLine.orientation = 'column';
-                        sizeLine.alignChildren = 'left';
-                        sizeLine.orientation = 'row';   
-                        
- var compSettingPnl = tabSetting.add('panel',undefined,'1番目のレイヤーを移動');
-                var compSettingGrp = compSettingPnl.add('group',undefined,'compSettingGrp');
-                compSettingGrp.orientation = 'row';
-                compSettingGrp.alignment = [ScriptUI.Alignment.LEFT,ScriptUI.Alignment.CENTER];
-                    var compSettingGrpLeft = compSettingGrp.add('group',undefined,'compSettingGrpLeft');
-                    compSettingGrpLeft.orientation = 'column';
-                    compSettingGrpLeft.alignChildren = 'left';
-                    
-                    var compSettingGrpRight = compSettingGrp.add('group',undefined,'compSettingGrpRight');
-                    compSettingGrpRight.orientation = 'column';
-                    compSettingGrpRight.alignChildren = 'left';
-                        var compSettingGrpRightGrp004 = compSettingGrpRight.add("button",[20,20,100,50],"実行");
-                        compSettingGrpRightGrp004.orientation = 'row';
-                        
-                        
-                        var compSettingPnl = tabSetting.add('panel',undefined,'文字を書き出す');
+                        var compSettingPnl = tab.add('tab',undefined,'文字を書き出す');
                 var compSettingGrp = compSettingPnl.add('group',undefined,'compSettingGrp');
                 compSettingGrp.orientation = 'row';
                 compSettingGrp.alignment = [ScriptUI.Alignment.LEFT,ScriptUI.Alignment.CENTER];
@@ -101,12 +22,10 @@ var sizeLine = compSettingGrp.add("edittext", undefined, "10");
                     compSettingGrpRight.alignChildren = 'left';
                         var compSettingGrpRightGrp005 = compSettingGrpRight.add("button",[20,20,100,50],"実行");
                         compSettingGrpRightGrp005.orientation = 'row'; 
-                        
-
 
 //~ ~~~~~~~~UI setting~~~~~~~~
-tabSetting.spacing = 2;
-tabSetting.margins = 10;
+//~ tab.spacing = 1;
+//~ tab.margins = 1;
 
 compSettingGrpLeft.spacing = 18;
 compSettingGrpLeft.margins = 0;
@@ -122,97 +41,6 @@ winObj.show();
 winObj.layout.layout(true);  
 winObj.layout.resize();  
 }  
-
-
-// 文字のカラーを"D21C1D"にする
-compSettingGrpRightGrp002_red.onClick = function(){
-var Lay1 = app.project.activeItem.selectedLayers;
-for (i=0; i<Lay1.length; i++){
-var myComp = app.project.activeItem;
-var myTextLayer = Lay1[i];
-var mySourceText = myTextLayer.property("ADBE Text Properties").property("ADBE Text Document");
-var myTextDoc = mySourceText.value;
-var myColor = [210/255,28/255,29/255];
-
-myTextDoc.fillColor = myColor; 
-mySourceText.setValue(myTextDoc);
-}
-}
-
-
-// 文字のカラーを"000000"にする
-compSettingGrpRightGrp002_black.onClick = function(){
-var Lay2 = app.project.activeItem.selectedLayers;
-for (i=0; i<Lay2.length; i++){
-var myTextLayer = Lay2[i];
-var mySourceText = myTextLayer.property("ADBE Text Properties").property("ADBE Text Document");
-var myTextDoc = mySourceText.value;
-var myColor = [0/255,0/255,0/255];
-
-myTextDoc.fillColor = myColor; 
-mySourceText.setValue(myTextDoc);
-}
-}
-
-// 文字のカラーを"FFFFFF"にする
-compSettingGrpRightGrp002_white.onClick = function(){
-var Lay2 = app.project.activeItem.selectedLayers;
-for (i=0; i<Lay2.length; i++){
-var myTextLayer = Lay2[i];
-var mySourceText = myTextLayer.property("ADBE Text Properties").property("ADBE Text Document");
-var myTextDoc = mySourceText.value;
-var myColor = [255/255,255/255,255/255];
-
-myTextDoc.fillColor = myColor; 
-mySourceText.setValue(myTextDoc);
-}
-}
-
-
-// 黒い枠を付ける
-compSettingGrpRightGrp003_blackLine.onClick = function(){
-var Lay3 = app.project.activeItem.selectedLayers;
-var myColor = [0/255,0/255,0/255];
-var myLay = app.executeCommand(9008);
-for (i=0; i<Lay3.length; i++){
-var myLay = Lay3[i];
-myLay.property("Layer Styles").property("Stroke")("Color").setValue(myColor);
-myLay.property("Layer Styles").property("Stroke")("Size").setValue(sizeLine.text);
-}
-}
-
-// 白い枠を付ける
-compSettingGrpRightGrp003_whiteLine.onClick = function(){
-var Lay3 = app.project.activeItem.selectedLayers;
-var myColor = [255/255,255/255,255/255];
-var myLay = app.executeCommand(9008);
-for (i=0; i<Lay3.length; i++){
-var myLay = Lay3[i];
-myLay.property("Layer Styles").property("Stroke")("Color").setValue(myColor);
-myLay.property("Layer Styles").property("Stroke")("Size").setValue(sizeLine.text);
-}
-}
-
-// 白い枠を付ける
-compSettingGrpRightGrp003_reset.onClick = function(){
-var Lay3 = app.project.activeItem.selectedLayers;
-var myColor = [255/255,255/255,255/255];
-var myLay = app.executeCommand(9008);
-for (i=0; i<Lay3.length; i++){
-var myLay = Lay3[i];
-myLay.property("Layer Styles").property("Stroke")("Color").setValue(myColor);
-myLay.property("Layer Styles").property("Stroke")("Size").setValue(1);
-myLay.property("Layer Styles").property("Stroke")("opacity").setValue(sizeLine.text);
-}
-}
-
-// 一番目のレイヤーを上に持ってくる
-compSettingGrpRightGrp004.onClick = function(){
-var posLay = app.project.activeItem.selectedLayers;
-var myComp = app.project.activeItem;
-myComp.layer(1).moveBefore(posLay[0]);
-    }
-
 
 // 全てのテキストレイヤーを出力する
 compSettingGrpRightGrp005.onClick = function(){
